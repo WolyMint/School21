@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int max(int a, int b);
+
+int main()
+{
+    float a, b;
+    char c;
+    if(scanf("%f%f%c", &a,&b,&c) == 3 && (int)a == a && (int)b == b && c == '\n')
+    {
+        int z = max(a, b);
+        
+        if (a == b){
+            printf("%d", z);
+        }
+        
+        else
+            printf("%d", z);
+    }
+    else
+        printf ("n/a");
+    return 0;
+}
+
+int max(int a, int b)
+{
+    int m = a;
+    if(b >= a)
+        m = b;
+    return m;
+}
