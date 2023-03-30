@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int sum(int a, int b);
+int minus(int a, int b);
+int mult(int a, int b);
+int delit(int a, int b);
+
+int main()
+{
+    float a, b;
+    char c;
+    if(scanf("%f%f%c", &a,&b,&c) == 3 && (int)a == a && (int)b == b && c == '\n')
+    {
+        int z = sum(a, b);
+        int y = minus(a, b);
+        int x = mult(a, b);
+
+        if (b == 0){
+            printf("%d ", z);
+            printf("%d ", y);
+            printf("%d ", x);
+            printf("n/a");
+        }
+        
+        else
+        {
+            int q = delit(a, b);
+            printf("%d ", z);
+            printf("%d ", y);
+            printf("%d ", x);
+            printf("%d", q);
+        }
+    }
+    else
+        printf ("n/a");
+    return 0;
+}
+
+int sum(int a, int b){
+    return (a + b);
+}
+
+int minus(int a, int b){
+    return (a - b);
+}
+
+int mult(int a, int b){
+    return (a * b);
+}
+
+int delit(int a, int b){
+    return (a / b);
+}
+
