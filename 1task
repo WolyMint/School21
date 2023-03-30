@@ -1,0 +1,9 @@
+vim src/edit.sh
+ls
+cat edit.sh
+#!/bin/bash
+if test -f "$1"; then
+sed -i "s//$2/$3/g" $1
+echo "$(pwd)/$1 - $(ls -l $1 | awk '{print$5}')-$(date + '%Y$m$d %H:$M') - $(openssl dgst -sha256 $1|awk'{print $2}')-sha256" >> files.log
+else echo "$1 not exists"
+fi
